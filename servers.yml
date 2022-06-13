@@ -136,8 +136,8 @@ Outputs:
           Description: The URL of the ALB
           Value:
             Fn::Sub:
-              - ${the_path}${url}
-              - {url: !GetAtt WebAppLB.DNSName, the_path: "http://"}
+              - ${http}${url}
+              - {url: !GetAtt WebAppLB.DNSName, http: "http://"}
 
           Export:
             Name: !Sub ${EnvironmentName}-ALB-URL
